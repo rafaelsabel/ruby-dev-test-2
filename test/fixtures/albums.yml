@@ -1,11 +1,8 @@
-fijacion:
-  name: Fijación Oral, Vol. 1
-  player: shakira
+madame_x:
+  name: Madame X
 
-fixation:
-  name: Oral Fixation, Vol. 2
-  player: shakira
+el_dorado:
+  name: El Dorado
 
-fixation:
-  name: She Wolf
-  player: shakira
+madonna_x_shakira:
+  name: Madonna X Shakira
