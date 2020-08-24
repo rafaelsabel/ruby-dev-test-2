@@ -11,4 +11,18 @@ class PlayerTest < ActiveSupport::TestCase
     assert_not player.valid?
     assert_not_empty player.errors[:name]
   end
+
+  test "allow destroy" do
+    player = players(:madonna)
+    assert player.destroy
+  end
+
+  test "not allow destroy" do
+    player = players(:madonna)
+    Album.create!(name: 'Madame X', contributors_attributes: [{ player_id: player.id }])
+
+    assert_raises (ActiveRecord::InvalidForeignKey) do
+      player.destroy
+    end
+  end
 end
